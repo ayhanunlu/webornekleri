@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Script denemesi</title>
+</head>
+<body>
+    <script>
+    function hesapla(){
+        var x=Number(document.getElementById("kutu1").value);
+        var y=Number(document.getElementById("kutu2").value);
+        var t=y/(x*x);
+        /*alert (t);*/ 
+        document.getElementById("toplam").value=t;
+        if(t<18.5){
+            document.getElementById("durum").value="Zayıf";
+            
+            
+            
+        } else if (t>18.5 && t<24.9){
+            
+            document.getElementById("durum").value="İdeal";
+            
+        } else if (t>24.9 && t<29.9){
+            
+            document.getElementById("durum").value="Kilolu";
+        }else {
+            
+            document.getElementById("durum").value="Obez";
+            
+            
+        }
+        
+        
+        
+    
+    }
+    
+    
+    
+    </script>
+    <center><h1>Vücut Kitle İndeksi Belirleme Programı</h1>
+    <form action="" style="border:2px double green;
+      padding:10px;
+      background-color: blue;
+      color:white; 
+      border-radius:20px;
+      
+       
+       
+       
+       ">
+        Boy (cm): <input type="text" id="kutu1"> <br> <br>
+        Kilo (kg): <input type="text" id="kutu2"> <br> <br>
+        BMI: <input type="text" id="toplam"> <br> <br>
+        Durum <input type="text" id="durum"><br><br>
+        
+        <input type="button" value="Hesapla" onclick="hesapla()">
+    
+        
+        
+        
+        
+        
+        
+        
+    </form>
+    
+    </center>
+    
+</body>
+</html>
